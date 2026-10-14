@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warranty Claim Tracker</title>
+  <!-- Link stylesheet correctly -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Warranty Claim Tracker</h1>
+
+    <!-- Claim Form -->
+    <form id="claimForm">
+      <div class="form-group">
+        <label for="name">Claimant Name:</label>
+        <input type="text" id="name" required placeholder="Enter full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required placeholder="name@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="productCode">Product Code:</label>
+        <input type="text" id="productCode" required placeholder="e.g., PROD-123">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Claim Category:</label>
+        <select id="category" required>
+          <option value="">--Select Category--</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Software">Software</option>
+          <option value="Billing">Billing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Claim Description:</label>
+        <textarea id="description" rows="4" required placeholder="Describe the issue (minimum 10 characters)..."></textarea>
+      </div>
+
+      <button type="submit">Submit Claim</button>
+    </form>
+
+    <!-- Area for status messages -->
+    <div id="statusMessage" class="status-message"></div>
+
+    <!-- Area where claim records are displayed -->
+    <div class="records-section">
+      <h2>Submitted Claims</h2>
+      <div id="claimsList">
+        <p class="no-records">No claims submitted yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link JavaScript file correctly (using defer so it loads after HTML) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
